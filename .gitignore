@@ -1,0 +1,11 @@
+# OS files
+.DS_Store
+Thumbs.db
+Thumbs.db:encryptable
+desktop.ini
+
+# Project metadata
+.agents/
+.gemini/
+.system_generated/
+*.log
