@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Giritharan S - Portfolio. Final-year Computer Science Engineering student and web developer building practical, enterprise-style web applications with Django and Cloud fundamentals.">
+    <meta name="keywords" content="Giritharan S, Portfolio, Web Developer, Django, Python, Cloud Computing, DevOps, Computer Science, Engineer">
+    <meta name="author" content="Giritharan S">
+    <title>Giritharan S | Web Developer & Cloud Enthusiast</title>
+    
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Background Glowing Effects -->
+    <div class="bg-glow-container">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="nav-logo">
+                GS<span style="color: var(--accent-purple);">.</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#contact" class="nav-btn btn-outline" id="nav-connect-btn">Let's Connect</a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Glowing background arc element -->
+        <div class="hero-glow-arc"></div>
+        
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content reveal active">
+                    <div class="hero-tag">
+                        <span></span>Available for Opportunities
+                    </div>
+                    <h1 class="hero-title">Giritharan S</h1>
+                    <h2 class="hero-subtitle">
+                        <span class="gradient-text">Web Developer</span> | Cloud Computing Enthusiast
+                    </h2>
+                    <p class="hero-description">
+                        Final-year Computer Science Engineering student building practical, enterprise-style web applications with Python, Django, and cloud fundamentals.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#projects" class="nav-btn btn-primary">View Projects</a>
+                        <a href="#contact" class="nav-btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-container reveal active">
+                    <div class="hero-image-glow"></div>
+                    <div class="hero-image-wrapper">
+                        <img src="assets/profile.jpg" alt="Giritharan S Profile Picture" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">My background, aspirations, and educational path.</p>
+            </div>
+            
+            <div class="about-grid">
+                <!-- Left: Biography and aspirations -->
+                <div class="about-card reveal">
+                    <div class="about-text">
+                        <p>
+                            I am a highly motivated final-year <strong>Computer Science Engineering</strong> student seeking an entry-level role in <strong>Cloud Engineering, Web, or Software Development</strong>. I am deeply passionate about exploring new tech stacks and creating functional, real-world digital solutions.
+                        </p>
+                        <p>
+                            Currently, I am expanding my knowledge base across backend systems, databases, cloud architectures, and core DevOps methodologies. I enjoy bridging the gap between clean code and reliable infrastructure.
+                        </p>
+                        <p>
+                            With solid problem-solving skills, strong team collaboration experience, and a willingness to continuously learn, I am excited to contribute and grow in a professional engineering environment.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right: Education timeline -->
+                <div class="about-card reveal">
+                    <h3 class="education-title">
+                        <i data-lucide="graduation-cap"></i> Education
+                    </h3>
+                    <div class="education-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2022 - PRESENT</div>
+                            <h4 class="timeline-title">B.Tech Computer Science Engineering</h4>
+                            <p class="timeline-subtitle">Achariya College of Engineering Technology</p>
+                            <p class="timeline-subtitle" style="font-weight: 600; color: var(--accent-blue); margin-top: 4px;">Final Year | CGPA: 7.2</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">COMPLETED 2023</div>
+                            <h4 class="timeline-title">Class XII (HSC)</h4>
+                            <p class="timeline-subtitle">St Joseph's Higher Secondary School</p>
+                            <p class="timeline-subtitle" style="font-weight: 600; color: var(--accent-blue); margin-top: 4px;">Percentage: 63.3%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">My Skills</h2>
+                <p class="section-subtitle">Technological capabilities, frameworks, tools, and professional attributes.</p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Web & Frameworks -->
+                <div class="skills-category reveal">
+                    <h3 class="category-title">
+                        <i data-lucide="layout-template"></i> Web Development
+                    </h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript (Basics)</span>
+                        <span class="skill-tag">Bootstrap 5</span>
+                        <span class="skill-tag">Django Framework</span>
+                        <span class="skill-tag">Django REST Framework</span>
+                    </div>
+                </div>
+                
+                <!-- Programming & DB -->
+                <div class="skills-category reveal">
+                    <h3 class="category-title">
+                        <i data-lucide="code-2"></i> Languages & DB
+                    </h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java (Basics)</span>
+                        <span class="skill-tag">SQL (Basics)</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+                
+                <!-- Cloud, OS & Networks -->
+                <div class="skills-category reveal">
+                    <h3 class="category-title">
+                        <i data-lucide="cloud"></i> Systems & Cloud
+                    </h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Cloud Computing Fundamentals</span>
+                        <span class="skill-tag">AWS Basics</span>
+                        <span class="skill-tag">Azure Basics</span>
+                        <span class="skill-tag">Linux Operating System</span>
+                        <span class="skill-tag">Networking Fundamentals</span>
+                        <span class="skill-tag">REST API Concepts</span>
+                    </div>
+                </div>
+                
+                <!-- Tools & Creative -->
+                <div class="skills-category reveal">
+                    <h3 class="category-title">
+                        <i data-lucide="git-branch"></i> Tools & Creative
+                    </h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Digital Marketing</span>
+                        <span class="skill-tag">Client Campaigns</span>
+                        <span class="skill-tag">Video Editing</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skills-category reveal" style="grid-column: span 1;">
+                    <h3 class="category-title">
+                        <i data-lucide="users"></i> Soft Skills
+                    </h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Adaptability</span>
+                        <span class="skill-tag">Team Collaboration</span>
+                        <span class="skill-tag">Quick Learner</span>
+                        <span class="skill-tag">Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Practical applications and personal ventures designed to solve real-world problems.</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1: NexDesk -->
+                <div class="project-card reveal" data-project-id="nexdesk">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i data-lucide="terminal"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com" target="_blank" class="project-link" title="View Source Code" onclick="event.stopPropagation();">
+                                <i data-lucide="github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">NexDesk</h3>
+                    <p class="project-tagline">Enterprise IT Help Desk & Service Management</p>
+                    <p class="project-desc">
+                        A full-stack ITSM application replacing legacy workflows with a centralized ticketing platform, featuring role-based dashboards, SLA monitoring, and asset tracking.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Full-Stack</span>
+                        <span class="project-tag">Django</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Bootstrap 5</span>
+                    </div>
+                    <button class="project-more-btn">
+                        View Details <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Project 2: Green Eye -->
+                <div class="project-card reveal" data-project-id="greeneye">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i data-lucide="trash-2"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com" target="_blank" class="project-link" title="View Source Code" onclick="event.stopPropagation();">
+                                <i data-lucide="github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Green Eye</h3>
+                    <p class="project-tagline">Smart Waste Reporting Platform</p>
+                    <p class="project-desc">
+                        A civic-tech crowdsourcing application that enables citizens to upload geotagged images of waste issues, alerting municipal crews to coordinate cleanups.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Civic Tech</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">HTML/CSS/JS</span>
+                    </div>
+                    <button class="project-more-btn">
+                        View Details <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Project 3: Travel Alarm -->
+                <div class="project-card reveal" data-project-id="travelalarm">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i data-lucide="bell"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com" target="_blank" class="project-link" title="View Source Code" onclick="event.stopPropagation();">
+                                <i data-lucide="github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Travel Alarm</h3>
+                    <p class="project-tagline">Smart Navigation Alert System</p>
+                    <p class="project-desc">
+                        A web-based geolocation tracker utilizing Leaflet.js mapping and real-time navigation alerts to sound an audio alarm before reaching a specific destination.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Leaflet.js</span>
+                        <span class="project-tag">Geolocation</span>
+                        <span class="project-tag">Howler.js</span>
+                    </div>
+                    <button class="project-more-btn">
+                        View Details <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Project 4: Thrift Pannuvom -->
+                <div class="project-card reveal" data-project-id="thriftpannuvom">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i data-lucide="shopping-bag"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://linkedin.com" target="_blank" class="project-link" title="View Venture Link" onclick="event.stopPropagation();">
+                                <i data-lucide="external-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Thrift Pannuvom</h3>
+                    <p class="project-tagline">Online Thrift Store & Venture</p>
+                    <p class="project-desc">
+                        An entrepreneurial online resale brand managed from the ground up, dealing in clothing curation, pricing, inventory optimization, and digital marketing.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">E-commerce</span>
+                        <span class="project-tag">Marketing</span>
+                        <span class="project-tag">Strategy</span>
+                    </div>
+                    <button class="project-more-btn">
+                        View Details <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-subtitle">Internships and professional engagements demonstrating practical engineering and communication skills.</p>
+            </div>
+            
+            <div class="experience-timeline-container">
+                <!-- Timeline item 1 -->
+                <div class="exp-item reveal">
+                    <div class="exp-dot"></div>
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Full Stack Developer Intern</h3>
+                                <span class="exp-company">NexGen Software Institute</span>
+                            </div>
+                            <span class="exp-date">Internship</span>
+                        </div>
+                        <p class="exp-desc">
+                            Designed and built high-performance responsive interface layouts utilizing HTML5, CSS3, and modern JavaScript. Optimized frontend interactions, fixed cross-browser layout inconsistencies, and contributed directly to enhancing the overall end-user experience.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Timeline item 2 -->
+                <div class="exp-item reveal">
+                    <div class="exp-dot"></div>
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">DevOps Intern</h3>
+                                <span class="exp-company">Twilight IT Solutions</span>
+                            </div>
+                            <span class="exp-date">Internship</span>
+                        </div>
+                        <p class="exp-desc">
+                            Gained foundational knowledge of standard DevOps architectures. Acquired hands-on practice setting up deployment workflows and provisioning server runtimes, concluding in constructing and deploying a real-time tracking project.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Timeline item 3 -->
+                <div class="exp-item reveal">
+                    <div class="exp-dot"></div>
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Digital Marketer</h3>
+                                <span class="exp-company">Caprix Media</span>
+                            </div>
+                            <span class="exp-date">Campaign Management</span>
+                        </div>
+                        <p class="exp-desc">
+                            Handled and optimized client campaigns. Designed targeted search and social campaign configurations, drafted copywriting materials, and coordinated directly with client stakeholders to meet performance parameters.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss job opportunities, project collaborations, or technical problems.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Info Column -->
+                <div class="contact-info reveal">
+                    <div>
+                        <h3 class="contact-title">Let's Build Something <span class="gradient-text">Together</span></h3>
+                        <p class="contact-intro">
+                            If you're looking for an entry-level engineer with a strong foundation in python, django development, SQL databases, cloud computing, and DevOps workflows, feel free to reach out. I am open to working remotely or on-site.
+                        </p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="contact-detail-text">
+                                <span>Phone</span>
+                                <a href="tel:+919789493378">+91 97894 93378</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="contact-detail-text">
+                                <span>Email</span>
+                                <a href="mailto:Giritharan200512@gmail.com">Giritharan200512@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon">
+                                <i data-lucide="linkedin"></i>
+                            </div>
+                            <div class="contact-detail-text">
+                                <span>LinkedIn</span>
+                                <a href="https://linkedin.com/in/giritharan-sugumar-62423b380" target="_blank">Giritharan Sugumar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-languages">
+                        <h4 class="languages-title">Languages Spoken</h4>
+                        <div class="languages-list">
+                            <div class="language-badge">
+                                <i data-lucide="check" style="color: var(--accent-blue); width: 16px; height: 16px;"></i> Tamil (Fluent)
+                            </div>
+                            <div class="language-badge">
+                                <i data-lucide="check" style="color: var(--accent-purple); width: 16px; height: 16px;"></i> English (Fluent)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Form Column -->
+                <div class="contact-form-container reveal">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-input" placeholder="How can I help you?" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-btn" id="submit-btn">
+                            Send Message <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+                        </button>
+                        
+                        <div class="form-status" id="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p style="font-weight: 600;">Designed & Built by Giritharan S</p>
+                </div>
+                
+                <div class="footer-socials">
+                    <a href="https://linkedin.com/in/giritharan-sugumar-62423b380" target="_blank" class="social-link" title="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="social-link" title="GitHub">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="mailto:Giritharan200512@gmail.com" class="social-link" title="Email">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 Giritharan S. All Rights Reserved. Built with HTML, Vanilla CSS & Vanilla JS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Expandable Project Details Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close Modal">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-title-group">
+                    <h3 class="modal-project-title" id="modal-title">Project Title</h3>
+                    <p class="modal-project-tagline" id="modal-tagline">Project Tagline</p>
+                </div>
+                
+                <div class="modal-tags" id="modal-tags">
+                    <!-- Project tags inserted here -->
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Overview</h4>
+                    <p class="modal-section-desc" id="modal-desc">
+                        Project detailed description.
+                    </p>
+                </div>
+                
+                <div class="modal-section" id="modal-features-section">
+                    <h4 class="modal-section-title">Key Features</h4>
+                    <ul class="modal-features-list" id="modal-features">
+                        <!-- Key features list items -->
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Tech Stack</h4>
+                    <div class="skills-list" id="modal-tech-stack" style="margin-top: 10px;">
+                        <!-- Tech badges -->
+                    </div>
+                </div>
+                
+                <div class="modal-links-group" id="modal-links">
+                    <!-- Action buttons -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lucide Icons Library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Script handling dynamic actions -->
+    <script src="js/main.js"></script>
+</body>
+</html>
