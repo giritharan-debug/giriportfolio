@@ -89,8 +89,25 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(element);
     });
 
-    /* 4. Projects & Client Work Detailed Data Map */
+    /* 4. Complete Projects & Client Work Detailed Data Map */
     const projectsData = {
+        nexdesk: {
+            title: "NexDesk ITSM Platform",
+            tagline: "Enterprise IT Help Desk & Service Management System",
+            description: "NexDesk is a full-stack IT Help Desk and Service Management (ITSM) web application that replaces legacy email/call-based support with a centralized ticketing platform. Designed with role-based dashboards, employees raise tickets with priority tags, IT engineers track resolutions, and administrators manage SLA policies, departments, and IT hardware assets.",
+            tags: ["Full-Stack", "Django", "ITSM", "MySQL", "Bootstrap 5"],
+            features: [
+                "Secure Authentication: Role-based routing (Employee, IT Support Engineer, Administrator).",
+                "Ticket Management: Seamless lifecycle stages (Open → In Progress → Resolved → Closed) with attachments.",
+                "Knowledge Base: Integrated search for common system FAQs and issue mitigations.",
+                "Asset Management: Dynamic database tracking hardware assets, software licenses, and user assignments.",
+                "SLA Management: Policy enforcement checks alerting engineers about overdue tickets.",
+                "Reports & Analytics: Visual dashboard graphs of open vs resolved tickets and engineer loads."
+            ],
+            techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Python", "Django", "Django REST Framework", "MySQL", "Git & GitHub"],
+            github: "https://github.com/giritharan-debug",
+            live: null
+        },
         caprix: {
             title: "Performance Marketing Campaigns (Caprix Media)",
             tagline: "Full-Funnel Paid Lead Generation for 3 Live Client Accounts",
@@ -122,36 +139,50 @@ document.addEventListener('DOMContentLoaded', () => {
             github: "https://github.com/giritharan-debug",
             live: null
         },
+        greeneye: {
+            title: "Green Eye",
+            tagline: "Smart Waste Reporting Platform",
+            description: "Developed as a civic-tech innovation, Green Eye empowers citizens to participate actively in urban environmental care. By creating an interactive reporting interface, locals can file waste cleanup requests dynamically with geographic context, driving structured waste management dispatch.",
+            tags: ["Civic Tech", "Python", "Community Impact", "SQL"],
+            features: [
+                "Geotagged Trash Reports: Visual coordinates linked to citizen report logs.",
+                "Image Upload Support: Snap and upload pictures of disposal issues directly from mobile viewports.",
+                "Official Portal: Authorized local government logs to coordinate sanitary collections.",
+                "Dynamic Progress Dashboard: Tracks community reports from logged to cleaned."
+            ],
+            techStack: ["HTML5", "CSS3", "JavaScript (Vanilla)", "Python", "Django", "SQL", "Git"],
+            github: "https://github.com/giritharan-debug",
+            live: null
+        },
+        travelalarm: {
+            title: "Travel Alarm",
+            tagline: "Smart Navigation Alert System",
+            description: "A web-based travel assistant created to safeguard commuters from oversleeping during journeys. By combining active tracking APIs with interactive maps, the system monitors location boundaries and sounds alarms when reaching the geofence perimeter.",
+            tags: ["Geolocation", "Maps", "Real-Time", "Mobile-Friendly"],
+            features: [
+                "Live Geolocation Tracking: Continual coordinate monitoring using HTML5 Geolocation API.",
+                "Map Integration: Interactive tracking nodes utilizing Leaflet.js maps and OpenStreetMap API.",
+                "Geofenced Alert Boundary: Set dynamic radius alerts (e.g. ring alarm 1.5km before destination).",
+                "Background Audio Player: Optimized high-contrast sound player using Howler.js."
+            ],
+            techStack: ["HTML5", "CSS3", "JavaScript (Vanilla)", "Leaflet.js", "OpenStreetMap API", "Geolocation API", "Howler.js"],
+            github: "https://github.com/giritharan-debug",
+            live: null
+        },
         thriftpannuvom: {
             title: "Thrift Pannuvom (Founder)",
-            tagline: "Independent Online Thrift Venture & Retail Brand",
-            description: "Founded and operated an independent thrift business for 8 months. Managed end-to-end operations spanning inventory curation, pricing strategy, customer communication, and organic social marketing.",
-            tags: ["Entrepreneurship", "Retail Venture", "Social Commerce", "Inventory Operations"],
+            tagline: "Online Thrift Store & Venture",
+            description: "Founded and operated an independent online thrift retail venture for 8 months. Handled end-to-end business operations spanning clothing curation, product grading, pricing strategy, inventory sheets, customer support outreach, and social shipping schedules.",
+            tags: ["Entrepreneurship", "Digital Marketing", "E-commerce", "Sales"],
             features: [
-                "End-to-End Business Operations: Sourcing, quality grading, cataloging, competitive pricing, and shipping logistics.",
-                "Social Media Customer Acquisition: Leveraged Instagram and community groups to build organic customer engagement.",
-                "Customer Service & Retention: Handled direct buyer inquiries, packaging, and fulfillment.",
-                "Venture Sustainability: Managed operational budgets and cash flow for 8 continuous months."
+                "Inventory Tracking: Optimized spreadsheet structures for stock tracking.",
+                "Marketing Automation: Curated social campaign layouts driving customer engagement.",
+                "Customer Fulfillment: Handled logistical planning, packaging, and shipping processes.",
+                "Venture Growth: Achieved operational profits within the first month of rollout."
             ],
             techStack: ["Social Commerce", "Digital Marketing", "Inventory Management", "Customer Operations", "Retail Strategy"],
             github: null,
             live: "https://linkedin.com/in/giritharan-sugumar-62423b380"
-        },
-        nexdesk: {
-            title: "NexDesk ITSM Platform",
-            tagline: "Enterprise IT Help Desk & Service Management System",
-            description: "A full-stack IT Help Desk and Service Management (ITSM) application that replaces legacy email-based workflows with a centralized ticketing platform, featuring role-based dashboards, SLA monitoring, and asset tracking.",
-            tags: ["Full-Stack", "Web Development", "Python", "MySQL", "Bootstrap 5"],
-            features: [
-                "Secure Authentication: Role-based routing (Employee, Engineer, Administrator).",
-                "Ticket Management: Seamless lifecycle stages (Open → In Progress → Resolved → Closed) with attachments.",
-                "Knowledge Base: Integrated search for common system FAQs and issue mitigations.",
-                "Asset & SLA Management: Dynamic database tracking hardware assets, software licenses, and SLA compliance timers.",
-                "Analytics Dashboard: Real-time visual metrics on ticket resolution times and engineer workload."
-            ],
-            techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Python", "MySQL", "Git & GitHub"],
-            github: "https://github.com/giritharan-debug",
-            live: null
         }
     };
 
