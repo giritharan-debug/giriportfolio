@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hamburger.addEventListener('click', () => {
         navLinksContainer.classList.toggle('active');
-        // Toggle hamburger icon between menu and close (x)
         const icon = hamburger.querySelector('i');
         if (navLinksContainer.classList.contains('active')) {
             icon.setAttribute('data-lucide', 'x');
@@ -47,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Highlight Active Link
     const activeObserverOptions = {
         root: null,
-        rootMargin: '-20% 0px -60% 0px', // Trigger when section occupies the sweet spot of the viewport
+        rootMargin: '-20% 0px -60% 0px',
         threshold: 0
     };
 
@@ -74,14 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealObserverOptions = {
         root: null,
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px' // Trigger slightly before element enters viewport
+        rootMargin: '0px 0px -50px 0px'
     };
 
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                revealObserver.unobserve(entry.target); // Reveal once only
+                revealObserver.unobserve(entry.target);
             }
         });
     }, revealObserverOptions);
@@ -90,69 +89,69 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(element);
     });
 
-    /* 4. Projects Detailed Data Map */
+    /* 4. Projects & Client Work Detailed Data Map */
     const projectsData = {
+        caprix: {
+            title: "Performance Marketing Campaigns (Caprix Media)",
+            tagline: "Full-Funnel Paid Lead Generation for 3 Live Client Accounts",
+            description: "Spearheading live digital marketing campaigns across 3 diverse client accounts at Caprix Media. Setting up, executing, and optimizing performance-driven Meta Ads (Facebook & Instagram) and Google Search Engine Marketing (SEM) targeted toward qualified inquiries, bookings, and form submissions rather than vanity impressions.",
+            tags: ["Meta Ads", "Google SEM", "Lead Gen", "Performance Marketing", "SEO/SMO"],
+            features: [
+                "Live Multi-Client Accounts: Manage end-to-end digital marketing activities across 3 active client brands.",
+                "Performance-Driven Paid Ads: Plan and run Meta Ads (Facebook/Instagram) and Google SEM optimized toward qualified leads rather than vanity traffic.",
+                "Full-Funnel SEO & SMO: Execute search engine optimization and social media optimization across client service offerings.",
+                "High-Impact Creative Production: Shoot, edit, and deliver video content using CapCut, DaVinci Resolve, and Premiere Pro alongside Canva graphics.",
+                "Data-Driven Account Management: Translate weekly performance and conversion metrics into real-time targeting and copy adjustments."
+            ],
+            techStack: ["Meta Ads Manager", "Google Ads / SEM", "DaVinci Resolve", "CapCut", "Adobe Premiere Pro", "Canva", "On-Page SEO", "SMO"],
+            github: null,
+            live: "https://linkedin.com/in/giritharan-sugumar-62423b380"
+        },
+        freelanceweb: {
+            title: "Freelance Website Development",
+            tagline: "5+ Client Websites Designed, Developed & Delivered",
+            description: "Delivering responsive, conversion-focused websites for 5+ freelance clients. Leveraging both frontend development skills and performance marketing insights to create fast, mobile-first websites that turn visitors into qualified leads and paying customers.",
+            tags: ["Web Development", "5+ Delivered Sites", "Conversion UX", "On-Page SEO"],
+            features: [
+                "5+ Complete Client Deliveries: Consulted, structured, designed, coded, and handed over websites end to end.",
+                "Conversion-Optimized Layouts: Strategically placed lead capture forms, clear value propositions, and CTA triggers.",
+                "Built-In SEO Best Practices: Clean semantic HTML5 structure, responsive viewports, and fast loading speeds.",
+                "Cross-Browser & Mobile Perfection: Tested across all mobile devices for 100% fluid alignment and readability."
+            ],
+            techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "SEO Basics", "Responsive Design", "Client Handover"],
+            github: "https://github.com/giritharan-debug",
+            live: null
+        },
+        thriftpannuvom: {
+            title: "Thrift Pannuvom (Founder)",
+            tagline: "Independent Online Thrift Venture & Retail Brand",
+            description: "Founded and operated an independent thrift business for 8 months. Managed end-to-end operations spanning inventory curation, pricing strategy, customer communication, and organic social marketing.",
+            tags: ["Entrepreneurship", "Retail Venture", "Social Commerce", "Inventory Operations"],
+            features: [
+                "End-to-End Business Operations: Sourcing, quality grading, cataloging, competitive pricing, and shipping logistics.",
+                "Social Media Customer Acquisition: Leveraged Instagram and community groups to build organic customer engagement.",
+                "Customer Service & Retention: Handled direct buyer inquiries, packaging, and fulfillment.",
+                "Venture Sustainability: Managed operational budgets and cash flow for 8 continuous months."
+            ],
+            techStack: ["Social Commerce", "Digital Marketing", "Inventory Management", "Customer Operations", "Retail Strategy"],
+            github: null,
+            live: "https://linkedin.com/in/giritharan-sugumar-62423b380"
+        },
         nexdesk: {
-            title: "NexDesk",
+            title: "NexDesk ITSM Platform",
             tagline: "Enterprise IT Help Desk & Service Management System",
-            description: "NexDesk is a robust, full-stack IT Help Desk and Service Management (ITSM) application that replaces legacy email-based IT support structures with a modern, centralized ticketing platform. Designed with logical partition, employees raise tickets with priority tags, engineers track updates, and administrators manage service level policies.",
-            tags: ["Full-Stack", "Django", "ITSM", "MySQL", "Bootstrap 5"],
+            description: "A full-stack IT Help Desk and Service Management (ITSM) application that replaces legacy email-based workflows with a centralized ticketing platform, featuring role-based dashboards, SLA monitoring, and asset tracking.",
+            tags: ["Full-Stack", "Web Development", "Python", "MySQL", "Bootstrap 5"],
             features: [
                 "Secure Authentication: Role-based routing (Employee, Engineer, Administrator).",
                 "Ticket Management: Seamless lifecycle stages (Open → In Progress → Resolved → Closed) with attachments.",
                 "Knowledge Base: Integrated search for common system FAQs and issue mitigations.",
-                "Asset Management: Dynamic database tracking hardware assets, software licenses, and user assignments.",
-                "SLA Management: Policy enforcement checks alerting engineers about overdue items.",
-                "Dashboard Analytics: Visual graphs of metrics (open vs resolved tickets, engineer loads, average response times)."
+                "Asset & SLA Management: Dynamic database tracking hardware assets, software licenses, and SLA compliance timers.",
+                "Analytics Dashboard: Real-time visual metrics on ticket resolution times and engineer workload."
             ],
-            techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Python", "Django", "Django REST Framework", "MySQL", "Git & GitHub"],
-            github: "https://github.com",
+            techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Python", "MySQL", "Git & GitHub"],
+            github: "https://github.com/giritharan-debug",
             live: null
-        },
-        greeneye: {
-            title: "Green Eye",
-            tagline: "Smart Waste Reporting Platform",
-            description: "Developed as a civic-tech innovation, Green Eye empowers citizens to participate actively in urban environmental care. By creating an interactive reporting interface, locals can file waste cleanup requests dynamically with geographic context, driving structured waste management dispatch.",
-            tags: ["Civic Tech", "Python", "Community Impact", "SQL"],
-            features: [
-                "Geotagged Trash Reports: Visual coordinates linked to citizen report logs.",
-                "Image Upload Support: Snap and upload pictures of disposal issues directly from mobile viewports.",
-                "Official Portal: Authorized local government logs to coordinate sanitary collections.",
-                "Dynamic Progress Dashboard: Tracks community reports from logged to cleaned."
-            ],
-            techStack: ["HTML5", "CSS3", "JavaScript (Vanilla)", "Python", "Django", "SQL", "Git"],
-            github: "https://github.com",
-            live: null
-        },
-        travelalarm: {
-            title: "Travel Alarm",
-            tagline: "Smart Navigation Alert System",
-            description: "A web-based travel assistant created to safeguard commuters from oversleeping during journeys. By combining active tracking APIs with interactive maps, the system monitors location boundaries and sound alarms when reaching the geofence perimeter.",
-            tags: ["Geolocation", "Maps", "Real-Time", "Mobile-Friendly"],
-            features: [
-                "Live Geolocation Tracking: Continual coordinate monitoring using HTML5 APIs.",
-                "Map Integration: Interactive tracking nodes utilizing Leaflet.js maps and OpenStreetMap API.",
-                "Geofenced Alert Boundary: Set dynamic radius alerts (e.g. ring alarm 1.5km before destination).",
-                "Background Audio Player: Optimized high-contrast sound player using Howler.js."
-            ],
-            techStack: ["HTML5", "CSS3", "JavaScript (Vanilla)", "Leaflet.js", "OpenStreetMap API", "Geolocation API", "Howler.js"],
-            github: "https://github.com",
-            live: null
-        },
-        thriftpannuvom: {
-            title: "Thrift Pannuvom",
-            tagline: "Online Thrift Business (Founder)",
-            description: "A personal entrepreneurial retail store managed and deployed online. Handles clothing curation, product grading, pricing, inventory sheets, customer support outreach, and social shipping schedules, building core operations and business logic.",
-            tags: ["Entrepreneurship", "Digital Marketing", "E-commerce", "Sales"],
-            features: [
-                "Inventory Tracking: Optimized spreadsheet structures for stock tracking.",
-                "Marketing Automation: Curated social campaign layouts driving client interactions.",
-                "Customer Fulfillment: Handled logistical planning, packaging, and shipping processes.",
-                "Venture Growth: Achieved operational profits within the first month of rollout."
-            ],
-            techStack: ["Social Commerce Tools", "Digital Marketing", "E-commerce", "Client Relations", "Excel Operations"],
-            github: null,
-            live: "https://linkedin.com"
         }
     };
 
@@ -218,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnGit.className = "nav-btn btn-outline";
             btnGit.style.display = "inline-flex";
             btnGit.style.gap = "8px";
-            btnGit.innerHTML = `<i data-lucide="github" style="width: 18px; height: 18px;"></i> GitHub Code`;
+            btnGit.innerHTML = `<i data-lucide="github" style="width: 18px; height: 18px;"></i> GitHub Profile`;
             linksContainer.appendChild(btnGit);
         }
 
@@ -229,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnLive.className = "nav-btn btn-primary";
             btnLive.style.display = "inline-flex";
             btnLive.style.gap = "8px";
-            btnLive.innerHTML = `<i data-lucide="external-link" style="width: 18px; height: 18px;"></i> View Project`;
+            btnLive.innerHTML = `<i data-lucide="external-link" style="width: 18px; height: 18px;"></i> View Profile / Case Study`;
             linksContainer.appendChild(btnLive);
         }
 
@@ -240,13 +239,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Add active classes
         modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Stop background scroll
+        document.body.style.overflow = 'hidden';
     };
 
     // Close Modal function
     const closeModal = () => {
         modal.classList.remove('active');
-        document.body.style.overflow = ''; // Resume background scroll
+        document.body.style.overflow = '';
     };
 
     // Attach click events to project cards
@@ -298,7 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalBtnContent = submitBtn.innerHTML;
             submitBtn.innerHTML = `Sending... <div class="spinner" style="display:inline-block; width:12px; height:12px; border:2px solid white; border-radius:50%; border-top-color:transparent; animation: spin 0.8s linear infinite; margin-left:5px;"></div>`;
             
-            // Inject styling for temporary inline spinner if not in CSS
             if (!document.getElementById('spinner-style')) {
                 const styleSheet = document.createElement("style");
                 styleSheet.id = "spinner-style";
@@ -306,15 +304,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.head.appendChild(styleSheet);
             }
 
-            formStatus.className = 'form-status'; // Reset classes
+            formStatus.className = 'form-status';
 
             // Simulate server request delay
             setTimeout(() => {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnContent;
                 
-                // Show Success status
-                showStatus('Message sent successfully! Giritharan will contact you soon.', 'success');
+                showStatus('Message sent successfully! Giritharan will reach out shortly.', 'success');
                 contactForm.reset();
             }, 1500);
         });
@@ -324,7 +321,6 @@ document.addEventListener('DOMContentLoaded', () => {
         formStatus.textContent = msg;
         formStatus.className = `form-status ${type}`;
         
-        // Hide error message after 5 seconds
         if (type === 'error') {
             setTimeout(() => {
                 formStatus.style.opacity = '0';
