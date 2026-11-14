@@ -178,18 +178,18 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
     transition: var(--transition-smooth);
-    background: rgba(5, 8, 20, 0.7);
+    background: rgba(5, 8, 20, 0.85);
 }
 
 .navbar.scrolled {
-    background: rgba(5, 8, 20, 0.85);
-    border-bottom: 1px solid rgba(59, 91, 255, 0.15);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(5, 8, 20, 0.95);
+    border-bottom: 1px solid rgba(59, 91, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 
 .navbar .container {
@@ -214,6 +214,8 @@ a {
     display: flex;
     align-items: center;
     gap: 8px;
+    position: relative;
+    z-index: 1010;
 }
 
 .nav-links {
@@ -286,6 +288,8 @@ a {
     border: none;
     color: var(--text-primary);
     font-size: 1.5rem;
+    position: relative;
+    z-index: 1010;
 }
 
 /* Hero Section */
@@ -470,22 +474,14 @@ a {
 }
 
 .hero-image-wrapper::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 35%;
-    background: linear-gradient(to top, rgba(5, 8, 20, 0.9) 0%, rgba(5, 8, 20, 0.3) 60%, transparent 100%);
-    pointer-events: none;
-    z-index: 2;
+    display: none;
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 15%;
+    object-position: center 20%;
     display: block;
 }
 
@@ -1194,7 +1190,7 @@ textarea.form-input {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 2000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1215,7 +1211,7 @@ textarea.form-input {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(3, 5, 12, 0.8);
+    background: rgba(3, 5, 12, 0.85);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
@@ -1229,7 +1225,7 @@ textarea.form-input {
     max-height: 85vh;
     overflow-y: auto;
     position: relative;
-    z-index: 1001;
+    z-index: 2001;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
     transform: translateY(20px);
     transition: transform 0.3s ease;
@@ -1347,14 +1343,17 @@ textarea.form-input {
 @media (max-width: 1024px) {
     .hero {
         min-height: auto;
-        padding: 100px 0 50px;
+        padding: 95px 0 45px;
         display: block;
     }
 
     .hero-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        gap: 2.5rem;
+        gap: 2rem;
+        width: 100%;
     }
     
     .hero-content {
@@ -1363,6 +1362,9 @@ textarea.form-input {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        opacity: 1 !important;
+        transform: none !important;
     }
     
     .hero-tag {
@@ -1381,8 +1383,13 @@ textarea.form-input {
     
     .hero-image-container {
         order: -1;
-        margin-top: 10px;
-        margin-bottom: 15px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        opacity: 1 !important;
+        transform: none !important;
     }
 
     .about-grid {
@@ -1415,18 +1422,26 @@ textarea.form-input {
         left: 0;
         width: 100%;
         height: calc(100vh - 70px);
-        background: #050814;
+        background: rgba(5, 8, 20, 0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         flex-direction: column;
         justify-content: center;
         gap: 2rem;
-        transform: translateY(-100%);
-        transition: transform 0.4s ease-in-out;
-        z-index: 99;
+        transform: translateY(-120%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: transform 0.35s ease-in-out, opacity 0.25s ease, visibility 0.35s;
+        z-index: 999;
         padding-bottom: 100px;
     }
     
     .nav-links.active {
         transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
     
     .hamburger {
@@ -1439,41 +1454,39 @@ textarea.form-input {
     
     .hero {
         padding-top: 85px;
-        padding-bottom: 45px;
+        padding-bottom: 40px;
     }
 
     .hero-glow-arc {
-        width: 300px;
-        height: 300px;
-    }
-
-    .hero-glow-arc::after {
-        display: none;
+        display: none !important;
     }
 
     .hero-image-frame {
-        width: min(250px, 70vw);
-        height: min(300px, 84vw);
+        width: min(210px, 62vw);
+        height: min(250px, 74vw);
     }
     
     .hero-image-glow {
         inset: -8px;
-        filter: blur(20px);
+        filter: blur(18px);
         opacity: 0.4;
     }
 
     .hero-title {
-        font-size: clamp(2.3rem, 7.5vw, 3rem);
+        font-size: clamp(2.1rem, 7.5vw, 2.8rem);
         line-height: 1.15;
+        margin-bottom: 12px;
     }
     
     .hero-subtitle {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
+        margin-bottom: 16px;
     }
 
     .hero-description {
         font-size: 0.95rem;
-        margin-bottom: 28px;
+        margin-bottom: 24px;
+        max-width: 520px;
     }
     
     .hero-ctas {
@@ -1481,14 +1494,14 @@ textarea.form-input {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px;
+        gap: 10px;
         width: 100%;
     }
 
     .hero-ctas .nav-btn {
         display: inline-flex;
-        padding: 11px 22px;
-        font-size: 0.88rem;
+        padding: 10px 18px;
+        font-size: 0.86rem;
     }
     
     .section {
@@ -1545,30 +1558,35 @@ textarea.form-input {
         padding: 0 1rem;
     }
 
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+
     .hero-title {
-        font-size: clamp(2rem, 8vw, 2.4rem);
+        font-size: clamp(1.85rem, 8vw, 2.2rem);
     }
 
     .hero-subtitle {
-        font-size: 1.05rem;
+        font-size: 1.02rem;
     }
 
     .hero-image-frame {
-        width: min(220px, 66vw);
-        height: min(265px, 80vw);
+        width: min(180px, 56vw);
+        height: min(220px, 68vw);
     }
 
     .hero-ctas {
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
-        gap: 10px;
+        gap: 8px;
     }
     
     .hero-ctas .nav-btn {
-        flex: 1 1 130px;
+        flex: 1 1 120px;
         width: auto;
-        padding: 10px 16px;
-        font-size: 0.85rem;
+        padding: 9px 14px;
+        font-size: 0.82rem;
     }
 }

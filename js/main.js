@@ -30,14 +30,38 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     });
 
-    // Close menu when a link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinksContainer.classList.remove('active');
-            hamburger.querySelector('i').setAttribute('data-lucide', 'menu');
-            lucide.createIcons();
+    // Smooth scrolling for anchor links with header offset and auto menu close
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (!targetId || targetId === '#') return;
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+                e.preventDefault();
+                navLinksContainer.classList.remove('active');
+                const menuIcon = hamburger.querySelector('i');
+                if (menuIcon) {
+                    menuIcon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                }
+                const headerOffset = 70;
+                const elementPosition = targetEl.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - (targetId === '#home' ? 0 : headerOffset);
+                window.scrollTo({
+                    top: targetId === '#home' ? 0 : offsetPosition,
+                    behavior: 'smooth'
+                });
+                if (history.pushState) {
+                    history.pushState(null, null, targetId);
+                }
+            }
         });
     });
+
+    // Ensure hero is visible on initial load if no hash or hash is #home
+    if (!window.location.hash || window.location.hash === '#home') {
+        window.scrollTo(0, 0);
+    }
 
     /* 3. Intersection Observer for Active Nav Highlight & Scroll Fade-Up */
     const sections = document.querySelectorAll('section');
